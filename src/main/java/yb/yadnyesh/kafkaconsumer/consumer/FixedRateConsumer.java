@@ -10,7 +10,7 @@ public class FixedRateConsumer {
 	
 	private static final Logger log = LoggerFactory.getLogger(FixedRateConsumer.class);
 	
-	@KafkaListener(topics = "t_fixedRate")
+	@KafkaListener(topics = "t_fixedrate")
 	public void consumeMessageFromKafka(String message) {
 		log.info("Consuming:  {}", message);
 	}
