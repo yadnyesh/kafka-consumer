@@ -11,7 +11,7 @@ public class KafkaKeyConsumer {
 	
 	private static final Logger log = LoggerFactory.getLogger(KafkaKeyConsumer.class);
 	
-	@KafkaListener(topics = "t_multipartitions", concurrency = "3")
+	@KafkaListener(topics = "t_multipartitions", concurrency = "4")
 	public void consumeKafkaMessagesWithKey(ConsumerRecord<String, String> message ) throws InterruptedException {
 		log.info("Key: {}, Partition {}, Message {}", message.key(), message.partition(), message.value());
 		Thread.sleep(1000);
